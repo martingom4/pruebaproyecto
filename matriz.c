@@ -12,22 +12,7 @@ int main(){
     {
         printf("%s\t| %s\n",listanombres[i],Cedulas[i]);
     }
-//Punto ver si estan registrados o no 
-char estudiante[30];
-int contador=0;
-printf("ingrese la cedula del estudiante \t");
-scanf("%s", estudiante);
-for (i=0;i<6;i++){
-    if(strcmp(Cedulas[i],estudiante)==0){
-        printf("El estudiante %s %s tiene acceso \n ", listanombres[i], Cedulas[i]);
-    }else{
-        contador++;
-    }
-}
-    if (contador==6)
-    {
-        printf("%s no tiene acceso\n", estudiante);
-    }
+
 //Imprirmir y ver estado de la computadora 
     int matriz [3][4]={{1,2,3,4},
                         {5,6,7,8},
@@ -38,11 +23,31 @@ for (i=0;i<6;i++){
     for(i=0;i<3;i++){
         for ( x = 0; x < 4; x++)
         {
-            estadoCompu[i][x]=-1;
+            estadoCompu[i][x]=-1;//indica la plaza si esta libre 
+    
         }
         
     }
 
+//Punto ver si estan registrados o no 
+    char cedulaEst[30];
+    int contador=0;
+    int temp=0;
+    printf("ingrese la cedula del estudiante \t");
+    scanf("%s", cedulaEst);
+    for (i=0;i<6;i++){
+        if(strcmp(Cedulas[i],cedulaEst)==0){
+        temp=i;//guardamos cedula en temporal
+        
+         
+        }   else{
+        contador++;
+        }
+    }
+    if (contador==6)
+    {
+        printf("%s no tiene acceso\n", cedulaEst);
+    }   
     for (i=0;i<3;i++){
         for (x= 0; x<4; x++)
         {
@@ -58,7 +63,9 @@ for (i=0;i<6;i++){
         printf("\n\n");
         
     }
-    }
+
+    
+}
 
 
 
