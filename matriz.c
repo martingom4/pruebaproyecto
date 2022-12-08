@@ -28,7 +28,7 @@ for (i=0;i<6;i++){
     {
         printf("%s no tiene acceso\n", estudiante);
     }
-//Imprirmir matriz punto 1 
+//Imprirmir y ver estado de la computadora 
     int matriz [3][4]={{1,2,3,4},
                         {5,6,7,8},
                         {9,10,11,12}};
@@ -46,7 +46,7 @@ for (i=0;i<6;i++){
     for (i=0;i<3;i++){
         for (x= 0; x<4; x++)
         {
-            if (estadoCompu[i][x]<0)
+            if (estadoCompu[i][x]<0)//indica si esta libre 
             {
                  printf("%d\t",matriz[i][x]);
             }
